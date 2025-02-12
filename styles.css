@@ -8,19 +8,12 @@
 body {
     overflow-y: scroll;
 }
-
-body h1,
-p {
+.aft{
     font-family: "Funnel Sans", serif;
 }
-
-body p {
+h1,p{
     font-family: "Funnel Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
 }
-
 /* ----------------------------------------- */
 
 
@@ -64,26 +57,35 @@ body p {
 
 .item4 {
     background-color: white;
-    color: blueviolet;
     border: 1.3px solid black;
     border-radius: 10px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 .item4:hover {
-    border: 0.1px solid blargb(104, 104, 104);
-    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); */
-
+    background-color: blueviolet;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 1); */
+    color: #91c3ff;
 }
-
+.item4:hover a,
+.item5:active a{
+    color: white;
+}
 .item5 {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+
     background-color: blueviolet;
     color: white;
     border: 1px solid black;
     border-radius: 10px;
 }
 
-.item5:hover {
+.item5:hover,
+.item5:active {
     background-color: white;
+    color: black;
     transition: 0.3s ease-in;
 }
 
@@ -91,7 +93,8 @@ body p {
     color: white;
 }
 
-.item5 a:hover {
+.item5:hover a,
+.item5:active a {
     color: black;
 }
 
@@ -102,6 +105,40 @@ body p {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     transform-origin: right;
     box-shadow: 0 2px 2px -2px gray;
+}
+
+
+@media(max-width:600px) {
+
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5,
+    .logo {
+        margin-top: 50px;
+
+        padding: 15px;
+        font-size: 30px;
+    }
+
+    .navbar {
+        /* flex-direction: column; */
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5,.logo{
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* ------------------------------------------------------- */
@@ -184,6 +221,61 @@ body p {
     .contant .big {
         margin-top: 3rem;
         max-width: 645px;
+    }
+    /* --------------- */
+    .contant {
+        max-width: 100%;
+        margin: 10px;
+        display: flex;
+        margin-top: 100px;
+        gap: 10px;
+    
+    }
+    .contact .heading{
+        /* max-width: 100%; */
+        width: 390px;
+    }
+    .heading button {
+        
+        font-size: 20px;
+        margin-top: 11rem;
+        margin-left: 10rem;
+    }
+    
+    .heading:hover button:hover {
+        background: rgb(73, 34, 98);
+        background: linear-gradient(90deg, rgb(138, 70, 184) 1%, rgb(153, 18, 221) 100%);
+        transition: background-color 0.2s ease-in;
+    }
+    
+    .contant img {
+        width: 350px;
+        height: 250px;
+        border-radius: 32px 5px 32px 5px;
+    }
+    
+    .imgc {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        margin: auto;
+    }
+    
+    .imgc img {
+        border-radius: 32px;
+        object-fit: cover;
+        width: 350px;
+        height: 250px;
+        /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); */
+    }
+    
+    .contant .big {
+        height: 500px;
+        width: 300px;
+        object-fit: cover;
+        /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); */
+    
     }
 
 }
@@ -355,7 +447,7 @@ hr {
     background-color: #d394f9;
     cursor: pointer;
     box-shadow: 5px 5px 0px rgba(173, 54, 255, 1);
-    
+
 }
 
 .feature2 {
@@ -385,7 +477,7 @@ hr {
 
 /* ------------------------------------------------------------------------- */
 
-.privacy{
+.privacy {
     padding: 100px;
     background-color: white;
     padding-top: 30px;
@@ -395,36 +487,46 @@ hr {
     align-items: center;
     margin-bottom: 5rem;
 }
-.privacy,  .privitem , .privimg{
+
+.privacy,
+.privitem,
+.privimg {
     gap: 5rem;
-    margin: 2rem 4rem 2rem 4rem ;
+    margin: 2rem 4rem 2rem 4rem;
 }
-.privacy img{
+
+.privacy img {
     width: 400px;
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
 }
-.privitem li{
+
+.privitem li {
     font-family: "Funnel Sans", serif;
-    text-decoration:double;
-    font-size:medium;
+    text-decoration: double;
+    font-size: medium;
 }
+
 @media (max-width:1384px) {
 
     .privacy {
         display: flex;
         flex-direction: column;
     }
-    .privacy img{
+
+    .privacy img {
         width: 600px;
         height: 600px;
         object-fit: cover;
         border-radius: 10px;
     }
-    .privacy,  .privitem , .privimg{
+
+    .privacy,
+    .privitem,
+    .privimg {
         gap: 5rem;
-        margin: auto ;
+        margin: auto;
         align-items: center;
         transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
@@ -444,19 +546,184 @@ hr {
     justify-content: center;
 }
 
-.fitem1,.fitem2,.fitem3,.fitem4{
+.fitem1,
+.fitem2,
+.fitem3,
+.fitem4 {
     color: rgba(255, 255, 255, 0.445);
     padding: 5px;
     margin-top: 5rem;
     text-align: left;
 }
-.fitem1 p, .fitem2 p, .fitem3 p, .fitem4 p {
+
+.fitem1 p,
+.fitem2 p,
+.fitem3 p,
+.fitem4 p {
     padding: 5px;
     cursor: pointer;
 }
-#about,#sales,#event,#follow{
-    cursor:auto;
+
+#about,
+#sales,
+#event,
+#follow {
+    cursor: auto;
     margin-bottom: 1rem;
     color: white;
     font-size: 20px;
 }
+
+
+
+/* -------------------login form -------------------------- */  
+
+
+.logcont {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    height: 100vh;
+}
+
+.logcont1 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content:baseline;
+    padding: 50px;
+}
+.logcont1 h1{
+    font-size: 50px;
+    margin-top: 5rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.logcont1 p{
+    margin-bottom: 5rem;
+    text-align: center;
+    color: rgb(125, 122, 122);
+}
+
+.logcont2{
+    background-image: url(img/loginform.jpg);
+    background-color: yellowgreen;
+    background-size: cover;
+    background-position: center;
+    opacity: 90%;
+    
+}
+input[type="email"], input[type="password"] {
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+form #formbtn1{
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form #formbtn1:hover{
+    background-color: rgb(93, 41, 142);
+    transition: all 0.2s ease-in;
+}
+form #formbtn2{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+form #formbtn2:hover{
+    background-color: rgb(93, 41, 142);
+    color: white;
+    transition: all 0.2s ease-in;
+}
+.logcont2 {
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    align-items: center;
+    color: black;
+    padding: 20px;
+}
+
+.logcont2 h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.logcont2 p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.logcont2 h1,.logcont2 p{
+    margin: 10px 10px 10px 10px;
+}
+/* --------------or----------- */
+.divider {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
+}
+
+.divider span {
+  white-space: nowrap;
+  color: #2c2c2c; /* Adjust color as needed */
+  font-weight: bold;
+}
+/* ------------------------------- */
+
+@media(max-width:1100px){
+    .logcont {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 100vh;
+        transition: all 0.5s ease-in;
+    }
+}
+@media(max-width:900px){
+    .logcont {
+        display: grid;
+        grid-template-columns: 100%;
+        height: 100vh;
+        transition: all 0.5s ease-in;
+    }
+}
+
+/* ------------------------------log in form end ------------------------------------- */
